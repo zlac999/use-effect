@@ -5,7 +5,7 @@ import EffectNoDep from "./components/EffectNoDep";
 import Username from "./components/Username";
 import users from "./mocks/users";
 
-function App({ values }) {
+function App() {
   const [test, setTest] = useState(0);
 
   const nums = [
@@ -32,7 +32,7 @@ function App({ values }) {
   ];
 
   function NumsUnique({ value }) {
-    return <p>{value}</p>;
+    return <li>{value}</li>;
   }
 
   return (
@@ -51,8 +51,8 @@ function App({ values }) {
       ))}
 
       <ul>
-        {nums.map((num) => (
-          <NumsUnique key={num.unique} value={num.value} />
+        {nums.map((nums) => (
+          <NumsUnique key={nums.unique} value={nums.value} />
         ))}
       </ul>
     </>
